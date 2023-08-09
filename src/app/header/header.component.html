@@ -18,8 +18,8 @@
       (window:resize)="collapsed = true"
     >
       <ul class="nav navbar-nav">
-        <li><a href="#" style="color: aliceblue">Recipes</a></li>
-        <li><a href="#" style="color: aliceblue">Shopping List</a></li>
+        <li><a href="#" style="color: aliceblue" (click)="onSelect('recipe')">Recipes</a></li>
+        <li><a href="#" style="color: aliceblue" (click)="onSelect('shopping-list')">Shopping List</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown">
