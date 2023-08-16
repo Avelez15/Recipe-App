@@ -8,9 +8,11 @@
       >
         <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
       </button>
-      <a routerLink="/" class="navbar-brand" style="color: aliceblue"
-        >Alejandro's Recipe Book</a
-      >
+      <div>
+        <a routerLink="/" class="navbar-brand" style="color: aliceblue"
+          >Alejandro's Recipe Book</a
+        >
+      </div>
     </div>
     <div
       class="navbar-collapse"
@@ -18,8 +20,19 @@
       (window:resize)="collapsed = true"
     >
       <ul class="nav navbar-nav">
-        <li><a href="#" style="color: aliceblue" (click)="onSelect('recipe')">Recipes</a></li>
-        <li><a href="#" style="color: aliceblue" (click)="onSelect('shopping-list')">Shopping List</a></li>
+        <li>
+          <a href="#" style="color: aliceblue" (click)="onSelect('recipe')"
+            >Recipes</a
+          >
+        </li>
+        <li>
+          <a
+            href="#"
+            style="color: aliceblue"
+            (click)="onSelect('shopping-list')"
+            >Shopping List</a
+          >
+        </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
