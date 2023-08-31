@@ -53,6 +53,10 @@ export class RecipeService {
     return this.recipes.slice(); //this will return a new array, which is an exact copy of this file. This prevents access to this array from outside, meaning we can only get this copy.
   }
 
+  getRecipeById(id: number) {
+    return this.recipes[id];
+  }
+
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.shoppingListService.addIngredients(ingredients);
   }

@@ -20,27 +20,25 @@
       (window:resize)="collapsed = true"
     >
       <ul class="nav navbar-nav">
-        <li>
-          <a style="color: aliceblue" routerLink="/recipes">Recipes</a>
+        <li routerLinkActive="active">
+          <a style="color: black" routerLink="/recipes">Recipes</a>
         </li>
-        <li>
-          <a style="color: aliceblue" routerLink="/shopping-list"
-            >Shopping List</a
-          >
+        <li routerLinkActive="active">
+          <a style="color: black" routerLink="/shopping-list">Shopping List</a>
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li class="dropdown" appDropdown>
           <a
-            href="#"
+            style="cursor: pointer"
             class="dropdown-toggle"
             role="button"
-            style="color: aliceblue"
+            style="color: black"
             >Manage <span class="caret"></span
           ></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Save Data</a></li>
-            <li><a href="#">Fetch Data</a></li>
+            <li><a style="cursor: pointer">Save Data</a></li>
+            <li><a style="cursor: pointer">Fetch Data</a></li>
           </ul>
         </li>
       </ul>
