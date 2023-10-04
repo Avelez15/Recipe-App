@@ -21,17 +21,26 @@
     >
       <ul class="nav navbar-nav">
         <li routerLinkActive="active">
-          <a style="color: black" routerLink="/recipes">Recipes</a>
+          <a style="color: black" routerLink="/recipes" *ngIf="isAuthenticated"
+            >Recipes</a
+          >
         </li>
         <li routerLinkActive="active">
           <a style="color: black" routerLink="/shopping-list">Shopping List</a>
         </li>
         <li routerLinkActive="active">
-          <a style="color: black" routerLink="/auth">Login</a>
+          <a style="color: black" routerLink="/auth" *ngIf="!isAuthenticated"
+            >Login</a
+          >
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown" appDropdown>
+        <li>
+          <a style="cursor: pointer; color: black" *ngIf="isAuthenticated"
+            >Logout</a
+          >
+        </li>
+        <li class="dropdown" appDropdown *ngIf="isAuthenticated">
           <a
             style="cursor: pointer"
             class="dropdown-toggle"
