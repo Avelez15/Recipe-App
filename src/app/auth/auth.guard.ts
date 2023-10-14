@@ -11,11 +11,14 @@ import { AuthService } from './auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
 
   canActivate(
     route: ActivatedRouteSnapshot,
-    router: RouterStateSnapshot
+    router: RouterStateSnapshot,
   ): boolean | Promise<boolean> | Observable<boolean | UrlTree> {
     return this.authService.user.pipe(
       take(1),
@@ -25,7 +28,7 @@ export class AuthGuard implements CanActivate {
           return true;
         }
         return this.router.createUrlTree(['/auth']);
-      })
+      }),
     );
   }
 }
