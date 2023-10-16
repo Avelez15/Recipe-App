@@ -27,7 +27,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
           name: this.editedItem.name,
           amount: this.editedItem.amount,
         });
-      }
+      },
     );
   }
 
@@ -37,7 +37,7 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
     if (this.editMode) {
       this.shoppingListService.updateIngredient(
         this.edittedItemIndex,
-        newIngredient
+        newIngredient,
       );
     } else {
       this.shoppingListService.addIngredient(newIngredient);

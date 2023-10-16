@@ -9,7 +9,10 @@ import { Router } from '@angular/router';
   templateUrl: './auth.component.html',
 })
 export class AuthComponent {
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+  ) {}
   isLoginMode = true;
   isLoading = false;
   error: string = null;
@@ -45,7 +48,7 @@ export class AuthComponent {
         console.log(errorMes);
         this.error = errorMes;
         this.isLoading = false;
-      }
+      },
     );
 
     form.reset();
