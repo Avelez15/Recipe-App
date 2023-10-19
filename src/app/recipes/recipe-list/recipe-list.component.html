@@ -3,6 +3,9 @@
     <button class="btn btn-success" (click)="onNewRecipe()">New Recipe</button>
   </div>
 </div>
+<div style="font-size: large; text-align: center" *ngIf="recipes.length > 0">
+  Your Recipes
+</div>
 <hr />
 <div class="row">
   <div class="col-xs-12">
