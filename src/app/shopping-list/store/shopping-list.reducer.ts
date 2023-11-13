@@ -4,7 +4,7 @@ import * as ShoppingListActions from './shopping-list.actions';
 
 export interface State {
   ingredients: Ingredient[];
-  editIndex: Number;
+  editIndex: number;
 }
 
 const initialState: State = {
@@ -42,7 +42,7 @@ const _shoppingListReducer = createReducer(
   })),
   on(ShoppingListActions.stopEdit, (state, action) => ({
     ...state,
-    editIndex: action.index,
+    editIndex: -1,
   }))
 );
 
