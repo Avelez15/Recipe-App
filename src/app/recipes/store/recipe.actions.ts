@@ -18,5 +18,9 @@ export const deleteRecipe = createAction(
 
 export const setRecipes = createAction(
   '[Recipe] Set Recipe',
-  props<{ index: number }>()
+  props<{ recipes: Recipe[] }>()
 );
+
+export const fetchRecipes = createAction('[Recipe] Fetch Recipes');
+
+export const storeRecipes = createAction('[Recipe] Store Recipes');
